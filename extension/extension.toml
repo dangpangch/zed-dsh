@@ -1,0 +1,49 @@
+# Legacy Agent Server Extension manifest — DeepSeek Harness (compat appendix)
+# Official Zed docs: docs/src/extensions/agent-servers.md
+# Deprecated on Zed >= v0.221; kept only for Zed <= v0.22x. Use ACP Registry
+# (registry/agent.json) or a Custom Agent on current Zed.
+#
+# Placeholders: archive URLs point at a v0.0.0 release that does not exist
+# yet; the release pipeline (packaging/build-archive.mjs + CI) injects real
+# URLs and sha256 into this file and registry/agent.json (M3).
+
+id = "zed-dsh"
+name = "DeepSeek Harness"
+version = "0.0.0"
+schema_version = 1
+authors = ["DeepSeek"]
+description = "DeepSeek Harness agent for Zed (legacy Agent Server Extension; current Zed: use the ACP Registry)"
+
+[agent_servers.deepseek-harness]
+name = "DeepSeek Harness"
+icon = "icon/dsh.svg"
+
+# ---- packaging injects archive URLs (and sha256 once computed) here ----
+
+[agent_servers.deepseek-harness.targets.darwin-aarch64]
+archive = "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-darwin-aarch64.tar.gz"
+cmd = "dsh-acp-zed"
+args = ["lib/bin.js"]
+
+[agent_servers.deepseek-harness.targets.darwin-x86_64]
+archive = "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-darwin-x86_64.tar.gz"
+cmd = "dsh-acp-zed"
+args = ["lib/bin.js"]
+
+[agent_servers.deepseek-harness.targets.linux-aarch64]
+archive = "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-linux-aarch64.tar.gz"
+cmd = "dsh-acp-zed"
+args = ["lib/bin.js"]
+
+[agent_servers.deepseek-harness.targets.linux-x86_64]
+archive = "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-linux-x86_64.tar.gz"
+cmd = "dsh-acp-zed"
+args = ["lib/bin.js"]
+
+[agent_servers.deepseek-harness.targets.windows-x86_64]
+archive = "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-windows-x86_64.zip"
+cmd = "dsh-acp-zed.exe"
+args = ["lib/bin.js"]
+
+# Optional: agent-level env, e.g. DSH_HOME relocation; provider credentials
+# never belong here — use the agent's login/env-first auth instead.

@@ -1,0 +1,35 @@
+{
+  "version": "0.0.0",
+  "platforms": {
+    "darwin-aarch64": {
+      "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-darwin-aarch64.tar.gz",
+      "sha256": null,
+      "nodeDist": null
+    },
+    "darwin-x86_64": {
+      "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-darwin-x86_64.tar.gz",
+      "sha256": null,
+      "nodeDist": null
+    },
+    "linux-aarch64": {
+      "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-linux-aarch64.tar.gz",
+      "sha256": null,
+      "nodeDist": null
+    },
+    "linux-x86_64": {
+      "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-linux-x86_64.tar.gz",
+      "sha256": null,
+      "nodeDist": null
+    },
+    "windows-aarch64": {
+      "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-windows-aarch64.zip",
+      "sha256": null,
+      "nodeDist": null
+    },
+    "windows-x86_64": {
+      "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-windows-x86_64.zip",
+      "sha256": null,
+      "nodeDist": null
+    }
+  }
+}

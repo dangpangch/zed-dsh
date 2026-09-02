@@ -1,0 +1,10 @@
+{
+  "agent_servers": {
+    "DeepSeek Harness": {
+      "type": "custom",
+      "command": "node",
+      "args": ["/abs/path/to/zed-dsh/server/lib/bin.js"],
+      "env": {}
+    }
+  }
+}

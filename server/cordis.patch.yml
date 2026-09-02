@@ -1,0 +1,28 @@
+# dsh-acp-zed bundle patch: applied over @deepseek-ai/dsh-base rows (which own
+# llm/settings/credentials/sandbox/tools...). Patch semantics: a patch REPLACES
+# the targeted row's whole config; insert rows add new ones. Rows are addressed
+# by id from the base bundle. See docs/design.zh.md §3-§5.
+- id: system-prompt
+  config:
+    persona: >-
+      You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}.
+      Your bash tool runs under a file sandbox — a `[sandbox: file access denied …]` result is policy, not a command bug.
+      Verify your work by running the code or tests. Keep answers brief and factual.
+
+- id: hmr
+  disabled: true
+
+- id: session-title-llm
+  disabled: true
+
+# The ACP bridge: our interactive adapter (M2), mounted from the built bundle
+# (tsdown entry src/bridge/index -> lib/src/bridge/index.js; the loader resolves
+# the './lib/...' name against the package root where boot.yml sits, cf. bin.ts
+# rootEntriesPath). provider/model default the shipped route; client sessions
+# may switch through configOptions (docs/design.zh.md §5/§6).
+- insert:
+    - id: acp-zed
+      name: './lib/src/bridge/index.js'
+      config:
+        provider: deepseek-official
+        model: deepseek-v4-flash

@@ -1,0 +1,47 @@
+{
+  "id": "deepseek-harness",
+  "name": "DeepSeek Harness",
+  "version": "0.0.0",
+  "description": "DeepSeek Harness coding agent for Zed's Agent Panel and other ACP clients: DeepSeek models, sandboxed bash/filesystem tools, session history, and per-session model/thinking/permission options over ACP v1. Distributed as self-contained per-platform archives from GitHub Releases (no npm package).",
+  "repository": "https://github.com/OWNER/zed-dsh",
+  "website": "https://github.com/OWNER/zed-dsh",
+  "authors": [
+    "OWNER"
+  ],
+  "license": "MIT",
+  "license_url": "https://github.com/OWNER/zed-dsh/blob/main/LICENSE",
+  "distribution": {
+    "binary": {
+      "darwin-aarch64": {
+        "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-darwin-aarch64.tar.gz",
+        "cmd": "dsh-acp-zed",
+        "args": ["lib/bin.js"]
+      },
+      "darwin-x86_64": {
+        "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-darwin-x86_64.tar.gz",
+        "cmd": "dsh-acp-zed",
+        "args": ["lib/bin.js"]
+      },
+      "linux-aarch64": {
+        "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-linux-aarch64.tar.gz",
+        "cmd": "dsh-acp-zed",
+        "args": ["lib/bin.js"]
+      },
+      "linux-x86_64": {
+        "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-linux-x86_64.tar.gz",
+        "cmd": "dsh-acp-zed",
+        "args": ["lib/bin.js"]
+      },
+      "windows-aarch64": {
+        "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-windows-aarch64.zip",
+        "cmd": "dsh-acp-zed.exe",
+        "args": ["lib/bin.js"]
+      },
+      "windows-x86_64": {
+        "archive": "https://github.com/OWNER/zed-dsh/releases/download/v0.0.0/dsh-acp-zed-windows-x86_64.zip",
+        "cmd": "dsh-acp-zed.exe",
+        "args": ["lib/bin.js"]
+      }
+    }
+  }
+}
